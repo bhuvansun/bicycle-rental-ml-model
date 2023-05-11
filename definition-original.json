@@ -1,0 +1,145 @@
+{
+  "Configuration": {
+    "Script": "train.py",
+    "UseAbsolutePath": false,
+    "Arguments": [],
+    "SourceDirectoryDataStore": null,
+    "Framework": 0,
+    "Communicator": 0,
+    "Target": "Alexios",
+    "DataReferences": {},
+    "Data": {},
+    "OutputData": {},
+    "Datacaches": [],
+    "JobName": null,
+    "MaxRunDurationSeconds": null,
+    "NodeCount": 1,
+    "InstanceTypes": [],
+    "Priority": null,
+    "CredentialPassthrough": false,
+    "Identity": null,
+    "Environment": {
+      "AutoRebuild": true,
+      "Python": {
+        "InterpreterPath": null,
+        "UserManagedDependencies": false,
+        "CondaDependencies": null,
+        "BaseCondaEnvironment": null
+      },
+      "EnvironmentVariables": {},
+      "Docker": {
+        "BaseImage": null,
+        "Platform": {
+          "Os": "Linux",
+          "Architecture": "amd64"
+        },
+        "BaseDockerfile": null,
+        "BaseImageRegistry": null
+      },
+      "Spark": {
+        "Repositories": [],
+        "Packages": [],
+        "PrecachePackages": true
+      },
+      "InferencingStackVersion": null
+    },
+    "History": {
+      "OutputCollection": true,
+      "DirectoriesToWatch": [
+        "logs"
+      ],
+      "EnableMLflowTracking": true
+    },
+    "Spark": {
+      "Configuration": {
+        "spark.app.name": "Azure ML Experiment",
+        "spark.yarn.maxAppAttempts": "1"
+      }
+    },
+    "ParallelTask": {
+      "MaxRetriesPerWorker": 0,
+      "WorkerCountPerNode": 1,
+      "TerminalExitCodes": null,
+      "Configuration": {}
+    },
+    "BatchAi": {
+      "NodeCount": 0
+    },
+    "AmlCompute": {
+      "Name": null,
+      "VmSize": null,
+      "RetainCluster": false,
+      "ClusterMaxNodeCount": null
+    },
+    "AISuperComputer": {
+      "InstanceType": "D2",
+      "FrameworkImage": null,
+      "ImageVersion": null,
+      "Location": null,
+      "AISuperComputerStorageData": null,
+      "Interactive": false,
+      "ScalePolicy": null,
+      "VirtualClusterArmId": null,
+      "TensorboardLogDirectory": null,
+      "SSHPublicKey": null,
+      "SSHPublicKeys": null,
+      "EnableAzmlInt": true,
+      "Priority": "Medium",
+      "SLATier": "Standard",
+      "UserAlias": null
+    },
+    "KubernetesCompute": {
+      "InstanceType": null
+    },
+    "Tensorflow": {
+      "WorkerCount": 1,
+      "ParameterServerCount": 1
+    },
+    "Mpi": {
+      "ProcessCountPerNode": 1
+    },
+    "PyTorch": {
+      "CommunicationBackend": null,
+      "ProcessCount": null
+    },
+    "Hdi": {
+      "YarnDeployMode": 2
+    },
+    "ContainerInstance": {
+      "Region": null,
+      "CpuCores": 2,
+      "MemoryGb": 3.5
+    },
+    "ExposedPorts": null,
+    "Docker": {
+      "UseDocker": null,
+      "SharedVolumes": null,
+      "ShmSize": null,
+      "Arguments": null
+    },
+    "Cmk8sCompute": {
+      "Configuration": {}
+    },
+    "CommandReturnCodeConfig": {
+      "ReturnCode": 0,
+      "SuccessfulReturnCodes": []
+    },
+    "EnvironmentVariables": {},
+    "ApplicationEndpoints": {},
+    "Parameters": []
+  },
+  "Attribution": null,
+  "TelemetryValues": null,
+  "Overrides": null,
+  "SnapshotId": null,
+  "Snapshots": [],
+  "SourceCodeDataReference": null,
+  "ParentRunId": null,
+  "DataContainerId": null,
+  "RunType": null,
+  "DisplayName": null,
+  "EnvironmentAssetId": null,
+  "Properties": {},
+  "Tags": {},
+  "AggregatedArtifactPath": null
+}
