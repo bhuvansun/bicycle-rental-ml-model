@@ -1,0 +1,147 @@
+{
+    "runId": "AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08",
+    "runUuid": "80d4d2ed-8b76-4cb2-ad09-d92096a9d6d2",
+    "parentRunUuid": null,
+    "rootRunUuid": "80d4d2ed-8b76-4cb2-ad09-d92096a9d6d2",
+    "target": "Alexios",
+    "status": "Completed",
+    "parentRunId": null,
+    "dataContainerId": "dcid.AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08",
+    "createdTimeUtc": "2023-05-11T09:33:54.5146449+00:00",
+    "startTimeUtc": "2023-05-11T09:34:10.645Z",
+    "endTimeUtc": "2023-05-11T09:42:13.854Z",
+    "error": null,
+    "warnings": [
+        {
+            "source": "JasmineService",
+            "message": "User specified exit score reached, hence experiment is stopped. Current user specified exit_score/Metric Score Threshold: 0.085"
+        }
+    ],
+    "tags": {
+        "model_explain_run": "best_run",
+        "_aml_system_automl_run_workspace_id": "4b1cf2b1-7583-41bf-b821-62f3d12b5642",
+        "_aml_system_azureml.automlComponent": "AutoML",
+        "pipeline_id_000": "faf12f74cf9bbd358ca5525682c5030d36f7be7c;f661c4c94fc013673ea42b957be74a0c10afa09d;b76be6b5846772ee1128c4d415381c1e9fed455e;eeb51ca401f6ac9e00c6a4e67dd537dc510f85c2;9cd9fe3a6912d5ee1124987909ee7c01d3d5ae9d;aa04724b2e860659c715a3272aae2e4f271a4e6d;80fdd729fd9aae78ab2d17e4a0358ee0587d2ccd;b38352dd199d7958263e71f0707261eae3e6d9ce;02ac6c30be9204a421ab0ff7206f0160cab68485;65baf41614d29c025125f6c2258969d0f14d93e8;5a486b034121c92d91906199b87eb752761851ca;b1f6f0fa3e064e7a38cb63afcec319f38f0f947c;abf2c2a6f6dad83555a0f46a74eac5ca82e3b0c1;c0db5b1a3142268089f112bf13eb00001406eb4d;296b5533f15cbe902e2f4eeda4695cad0fc75cc0;1dc6e183d651bcb63cbd1f78012734eae92b1d22;bf9cfdd6f48761e3541926ed8594d763b6956a40;480cdce2736281b6062597c422a13e62a1b35221;5aa27227c56b9a4ff147b835b85af20357b383e5;f2f972164c4f91241532dde4000cbd78256e32ee",
+        "score_000": "0.08048882819856848;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN",
+        "predicted_cost_000": "0;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5;0.5",
+        "fit_time_000": "0.0590446;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN;NaN",
+        "training_percent_000": "100;100;100;100;100;100;100;100;100;100;100;100;100;100;100;100;100;100;100;100",
+        "iteration_000": "0;13;1;7;11;6;5;15;8;12;2;10;3;17;18;14;19;4;9;16",
+        "run_preprocessor_000": "MaxAbsScaler;;MaxAbsScaler;;;;;;;;;;;;;;;;;",
+        "run_algorithm_000": "LightGBM;;RandomForest;;;;;;;;;;;;;;;;;",
+        "_aml_system_azureml.automl_early_exit_message": "User specified exit score reached, hence experiment is stopped. Current user specified exit_score/Metric Score Threshold: 0.085",
+        "automl_best_child_run_id": "AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08_0",
+        "model_explain_best_run_child_id": "AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08_0"
+    },
+    "properties": {
+        "num_iterations": "1000",
+        "training_type": "TrainFull",
+        "acquisition_function": "EI",
+        "primary_metric": "normalized_root_mean_squared_error",
+        "train_split": "0",
+        "acquisition_parameter": "0",
+        "num_cross_validation": null,
+        "target": "Alexios",
+        "AMLSettingsJsonString": "{\"enable_early_stopping\":true,\"enable_ensembling\":true,\"enable_stack_ensembling\":true,\"ensemble_iterations\":15,\"enable_onnx_compatible_models\":false,\"save_mlflow\":true,\"max_cores_per_iteration\":-1,\"send_telemetry\":true,\"blacklist_algos\":[\"TensorFlowDNN\",\"TensorFlowLinearRegressor\"],\"whitelist_models\":[\"RandomForest\",\"LightGBM\"],\"compute_target\":\"Alexios\",\"enable_dnn\":false,\"enable_code_generation\":true,\"experiment_exit_score\":0.085,\"experiment_timeout_minutes\":30,\"featurization\":{\"_blocked_transformers\":[],\"_column_purposes\":{},\"_transformer_params\":{\"Imputer\":[]},\"_drop_columns\":null},\"hyperdrive_config\":null,\"grain_column_names\":null,\"is_timeseries\":false,\"iteration_timeout_minutes\":30,\"max_concurrent_iterations\":2,\"metric_operation\":\"minimize\",\"model_explainability\":true,\"n_cross_validations\":null,\"name\":\"mslearn-bike-rental\",\"path\":\"./sample_projects/mslearn-bike-rental\",\"primary_metric\":\"normalized_root_mean_squared_error\",\"region\":\"centralindia\",\"resource_group\":\"ezio\",\"subscription_id\":\"d49067c6-0d06-4a1d-84e1-f0904327214e\",\"task_type\":\"regression\",\"validation_size\":null,\"test_size\":null,\"vm_type\":\"STANDARD_DS11_V2\",\"workspace_name\":\"main\",\"label_column_name\":\"rentals\",\"enable_batch_run\":true,\"dataset_id\":\"37bbc6d9-9f05-4528-99cd-efc508cc2aa9\"}",
+        "DataPrepJsonString": "{\\\"datasets\\\":0,\\\"training_data\\\":{\\\"datasetId\\\":\\\"37bbc6d9-9f05-4528-99cd-efc508cc2aa9\\\"}}",
+        "EnableSubsampling": "False",
+        "runTemplate": "AutoML",
+        "azureml.runsource": "automl",
+        "_aml_system_scenario_identification": "Remote.Parent",
+        "ClientType": "Browser",
+        "PlatformVersion": "DPV1",
+        "environment_cpu_name": "AzureML-AutoML",
+        "environment_cpu_label": "prod",
+        "environment_gpu_name": "AzureML-AutoML-GPU",
+        "environment_gpu_label": "prod",
+        "root_attribution": "automl",
+        "attribution": "AutoML",
+        "Orchestrator": "AutoML",
+        "CancelUri": "https://centralindia.api.azureml.ms/jasmine/v1.0/subscriptions/d49067c6-0d06-4a1d-84e1-f0904327214e/resourceGroups/ezio/providers/Microsoft.MachineLearningServices/workspaces/main/experiment/mslearn-bike-rental/cancel/AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08",
+        "ClientSdkVersion": null,
+        "snapshotId": "00000000-0000-0000-0000-000000000000",
+        "SetupRunId": "AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08_setup",
+        "SetupRunContainerId": "dcid.AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08_setup",
+        "FeaturizationRunJsonPath": "featurizer_container.json",
+        "FeaturizationRunId": "AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08_featurize",
+        "ProblemInfoJsonString": "{\"dataset_num_categorical\": 0, \"is_sparse\": true, \"subsampling\": false, \"has_extra_col\": true, \"dataset_classes\": 606, \"dataset_features\": 64, \"dataset_samples\": 731, \"single_frequency_class_detected\": false}",
+        "ModelExplainRunId": "AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08_ModelExplain"
+    },
+    "parameters": {},
+    "services": {},
+    "inputDatasets": [
+        {
+            "identifier": {
+                "savedId": "37bbc6d9-9f05-4528-99cd-efc508cc2aa9",
+                "registeredId": null,
+                "registeredVersion": null
+            },
+            "consumptionType": "RunInput",
+            "inputDetails": {
+                "inputName": "training_data",
+                "mechanism": "Direct",
+                "pathOnCompute": null
+            }
+        }
+    ],
+    "outputDatasets": [],
+    "runDefinition": null,
+    "logFiles": {},
+    "jobCost": {
+        "chargedCpuCoreSeconds": null,
+        "chargedCpuMemoryMegabyteSeconds": null,
+        "chargedGpuSeconds": null,
+        "chargedNodeUtilizationSeconds": null
+    },
+    "revision": 16,
+    "runTypeV2": {
+        "orchestrator": "AutoML",
+        "traits": [
+            "automl",
+            "Remote.Parent"
+        ],
+        "attribution": null,
+        "computeType": null
+    },
+    "settings": {},
+    "computeRequest": null,
+    "compute": null,
+    "createdBy": {
+        "userObjectId": "2eaf8b43-01dc-4935-9623-74242b507b09",
+        "userPuId": "10032001BF7F16CA",
+        "userIdp": null,
+        "userAltSecId": null,
+        "userIss": "https://sts.windows.net/be5109ea-c534-473c-af60-2054e070a0ed/",
+        "userTenantId": "be5109ea-c534-473c-af60-2054e070a0ed",
+        "userName": "Thribhuvan Sunkavalli",
+        "upn": "EC21B1093@iiitdm.ac.in"
+    },
+    "computeDuration": "00:08:03.2092343",
+    "effectiveStartTimeUtc": null,
+    "runNumber": 1683797634,
+    "rootRunId": "AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08",
+    "userId": "2eaf8b43-01dc-4935-9623-74242b507b09",
+    "statusRevision": 3,
+    "currentComputeTime": null,
+    "lastStartTimeUtc": null,
+    "lastModifiedBy": {
+        "userObjectId": "2eaf8b43-01dc-4935-9623-74242b507b09",
+        "userPuId": "10032001BF7F16CA",
+        "userIdp": null,
+        "userAltSecId": null,
+        "userIss": "azureml",
+        "userTenantId": "be5109ea-c534-473c-af60-2054e070a0ed",
+        "userName": "Thribhuvan Sunkavalli",
+        "upn": null
+    },
+    "lastModifiedUtc": "2023-05-11T09:43:39.5282834+00:00",
+    "duration": "00:08:03.2092343",
+    "inputs": null,
+    "outputs": {
+        "best_model": {
+            "assetId": "azureml://locations/centralindia/workspaces/4b1cf2b1-7583-41bf-b821-62f3d12b5642/models/azureml_AutoML_27220109-27e7-4f3b-882c-3b786c7f6b08_0_output_mlflow_log_model_901225414/versions/1",
+            "type": "MLFlowModel"
+        }
+    },
+    "currentAttemptId": 1
+}
