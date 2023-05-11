@@ -1,0 +1,158 @@
+{
+  "Configuration": {
+    "Script": "train.py",
+    "UseAbsolutePath": false,
+    "Arguments": [],
+    "SourceDirectoryDataStore": null,
+    "Framework": 0,
+    "Communicator": 0,
+    "Target": "Alexios",
+    "DataReferences": {},
+    "Data": {},
+    "OutputData": {},
+    "Datacaches": [],
+    "JobName": null,
+    "MaxRunDurationSeconds": null,
+    "NodeCount": 1,
+    "InstanceTypes": [],
+    "Priority": null,
+    "CredentialPassthrough": false,
+    "Identity": null,
+    "Environment": {
+      "Name": "AzureML-AutoML",
+      "Version": "138",
+      "AssetId": "azureml://registries/azureml/environments/AzureML-AutoML/versions/138",
+      "AutoRebuild": true,
+      "Python": {
+        "InterpreterPath": "python",
+        "UserManagedDependencies": true,
+        "CondaDependencies": null,
+        "BaseCondaEnvironment": null
+      },
+      "EnvironmentVariables": {
+        "EXAMPLE_ENV_VAR": "EXAMPLE_VALUE"
+      },
+      "Docker": {
+        "BaseImage": null,
+        "Platform": {
+          "Os": "Linux",
+          "Architecture": "amd64"
+        },
+        "BaseDockerfile": "FROM mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04\n\nENV AZUREML_CONDA_ENVIRONMENT_PATH /azureml-envs/azureml-automl\nENV PATH $AZUREML_CONDA_ENVIRONMENT_PATH/bin:$PATH\n\n# COPY --from=mcr.microsoft.com/azureml/mlflow-ubuntu20.04-py38-cpu-inference:20230306.v3 /var/mlflow_resources/mlflow_score_script.py /var/mlflow_resources/mlflow_score_script.py\n\n# ENV MLFLOW_MODEL_FOLDER=\"mlflow-model\"\n# ENV AML_APP_ROOT=\"/var/mlflow_resources\"\n# ENV AZUREML_ENTRY_SCRIPT=\"mlflow_score_script.py\"\n\nENV ENABLE_METADATA=false\n\n# Create conda environment\nRUN conda create -p $AZUREML_CONDA_ENVIRONMENT_PATH \\\n    python=3.8 \\\n    pip=22.1.2 \\\n    numpy~=1.22.3 \\\n    py-cpuinfo=5.0.0 \\\n    joblib=1.2.0 \\\n    cloudpickle=1.6.0 \\\n    scikit-learn=0.22.1 \\\n    pandas~=1.1.5 \\\n    py-xgboost=1.3.3 \\\n    holidays=0.10.3 \\\n    setuptools-git \\\n    setuptools=65.5.1 \\\n    wheel=0.38.1 \\\n    cryptography=39.0.1 \\\n    'psutil>5.0.0,<6.0.0' \\\n    -c conda-forge -c pytorch -c anaconda && \\\n    conda run -p $AZUREML_CONDA_ENVIRONMENT_PATH && \\\n    conda clean -a -y\n\n# Install pip dependencies\nRUN pip install  'azureml-core==1.50.0' \\\n                'azureml-mlflow==1.50.0' \\\n                'azureml-pipeline-core==1.50.0.post1' \\\n                'azureml-telemetry==1.50.0' \\\n                'azureml-interpret==1.50.0' \\\n                'azureml-responsibleai==1.50.0' \\\n                'azureml-automl-core==1.50.0' \\\n                'azureml-automl-runtime==1.50.0' \\\n                'azureml-train-automl-client==1.50.0' \\\n                'azureml-train-automl-runtime==1.50.0' \\\n                'azureml-dataset-runtime==1.50.0' \\\n                'azureml-defaults==1.50.0' \\\n                'inference-schema' \\\n                'fbprophet==0.7.1' \\\n                'pystan==2.19.1.1' \\\n                'mltable>=1.0.0' \\\n                'boto3==1.15.18' \\\n                'botocore==1.18.18'",
+        "BaseImageRegistry": {
+          "Address": null,
+          "Username": null,
+          "Password": null
+        },
+        "Enabled": false,
+        "Arguments": []
+      },
+      "Spark": {
+        "Repositories": [],
+        "Packages": [],
+        "PrecachePackages": true
+      },
+      "InferencingStackVersion": null
+    },
+    "History": {
+      "OutputCollection": true,
+      "DirectoriesToWatch": [
+        "logs"
+      ],
+      "EnableMLflowTracking": true
+    },
+    "Spark": {
+      "Configuration": {
+        "spark.app.name": "Azure ML Experiment",
+        "spark.yarn.maxAppAttempts": "1"
+      }
+    },
+    "ParallelTask": {
+      "MaxRetriesPerWorker": 0,
+      "WorkerCountPerNode": 1,
+      "TerminalExitCodes": null,
+      "Configuration": {}
+    },
+    "BatchAi": {
+      "NodeCount": 0
+    },
+    "AmlCompute": {
+      "Name": null,
+      "VmSize": null,
+      "RetainCluster": false,
+      "ClusterMaxNodeCount": null
+    },
+    "AISuperComputer": {
+      "InstanceType": "D2",
+      "FrameworkImage": null,
+      "ImageVersion": null,
+      "Location": null,
+      "AISuperComputerStorageData": null,
+      "Interactive": false,
+      "ScalePolicy": null,
+      "VirtualClusterArmId": null,
+      "TensorboardLogDirectory": null,
+      "SSHPublicKey": null,
+      "SSHPublicKeys": null,
+      "EnableAzmlInt": true,
+      "Priority": "Medium",
+      "SLATier": "Standard",
+      "UserAlias": null
+    },
+    "KubernetesCompute": {
+      "InstanceType": null
+    },
+    "Tensorflow": {
+      "WorkerCount": 1,
+      "ParameterServerCount": 1
+    },
+    "Mpi": {
+      "ProcessCountPerNode": 1
+    },
+    "PyTorch": {
+      "CommunicationBackend": null,
+      "ProcessCount": null
+    },
+    "Hdi": {
+      "YarnDeployMode": 2
+    },
+    "ContainerInstance": {
+      "Region": null,
+      "CpuCores": 2,
+      "MemoryGb": 3.5
+    },
+    "ExposedPorts": null,
+    "Docker": {
+      "UseDocker": null,
+      "SharedVolumes": null,
+      "ShmSize": null,
+      "Arguments": null
+    },
+    "Cmk8sCompute": {
+      "Configuration": {}
+    },
+    "CommandReturnCodeConfig": {
+      "ReturnCode": 0,
+      "SuccessfulReturnCodes": []
+    },
+    "EnvironmentVariables": {
+      "AUTOML_SDK_RESOURCE_URL": "https://aka.ms/automl-resources/"
+    },
+    "ApplicationEndpoints": {},
+    "Parameters": []
+  },
+  "Attribution": null,
+  "TelemetryValues": null,
+  "Overrides": null,
+  "SnapshotId": null,
+  "Snapshots": [],
+  "SourceCodeDataReference": null,
+  "ParentRunId": null,
+  "DataContainerId": null,
+  "RunType": null,
+  "DisplayName": null,
+  "EnvironmentAssetId": null,
+  "Properties": {},
+  "Tags": {},
+  "AggregatedArtifactPath": null
+}
